@@ -1,19 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   eslint: {
-    ignoreDuringBuilds: true,
+    ignoreDuringBuilds: true, // skip lint errors during build
   },
   typescript: {
-    ignoreBuildErrors: true,
+    ignoreBuildErrors: true, // skip type errors during build
   },
   images: {
-    unoptimized: true,
+    unoptimized: true, // serve images as-is
   },
-  output: 'export',
-
-  // Fix paths for GitHub Pages
-  basePath: '/arunodaya',   // your repo name
-  assetPrefix: '/arunodaya/', // fixes CSS/JS path issues
+  // No output/export — Vercel will handle server build
 }
 
-export default nextConfig
+export default nextConfig;
